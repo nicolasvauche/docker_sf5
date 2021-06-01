@@ -3,15 +3,14 @@
 
 # bash prompt :
 #
-#user┬hostname ─ folder
-#    ╰─ $ 
+#user@hostname (folder) $
 
-PS1='\n\u┬\h ─ \W\n    ╰─ \[\e[1m\]\$\[\e[0m\] '
+PS1='\n\u@\h (\W) $ '
 
 # ls aliases :
 
 alias ls='ls --color=auto'
-alias l='ls -lart'
+alias lsa='ls -lart'
 
 #symfony aliases :
 
