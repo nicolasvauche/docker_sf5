@@ -15,23 +15,24 @@ Installation d'un environnement LAMP avec Docker et Symfony4.
 4. Dupliquer le fichier `.bashrc-sample` et le renommer en `.bashrc` :  
 `$ cp .bashrc-sample .bashrc`  
 
-5. Monter les conteneurs Docker (MySQL, Adminer, PHP 7.4-apache) :  
+5. Monter les conteneurs Docker (MySQL, Adminer, MailDev, PHP 7.4-apache) :  
 `$ docker compose up`  
 
 6. Ouvrir un autre onglet de votre terminal, et accéder à la console de votre conteneur principal :  
-`$ docker exec -it docker_sf4_php_1 bash`  
+`$ docker exec -it docker_sf4_www bash`  
 
 7. Dupliquer le fichier `app/.env` et le renommer en `.env.local` :  
 `$ cd app`  
 `$ cp .env .env.local`  
 
 8. Paramétrer l'accès à votre base de données :  
-`DATABASE_URL="mysql://[YOUR_DB_USER]:[YOUR_PASSWORD]@docker_sf4_db_1:3306/[YOUR_DATABASE_NAME]?serverVersion=5.7"`  
+`DATABASE_URL="mysql://[YOUR_DB_USER]:[YOUR_PASSWORD]@docker_sf4_mysql:3306/[YOUR_DATABASE_NAME]?serverVersion=5.7"`  
 
 9. Installer les dépendances de Symfony avec Composer :  
 `composer install`  
 
 ## Utilisation  
 Dans votre navigateur :  
-    http://127.0.0.1:8080 => Votre application  
-    http://127.0.0.1:8081 => Adminer
+- http://localhost:8080 => Votre application  
+- http://localhost:8081 => Adminer  
+- http://localhost:8081 => MailDev  
