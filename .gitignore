@@ -1,2 +1,4 @@
-.env
-.bashrc
+/.env
+/.bashrc
+.vscode
+.idea
